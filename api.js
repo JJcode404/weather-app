@@ -17,10 +17,20 @@ async function processJSONData(apiData){
         temperature
     }
 };
-async function checkWeatherStatus(){
-    const kenyaData = await getWeatherData("kenya");
-    const kenyaProcessedData = processJSONData(kenyaData);
-    console.log(kenyaProcessedData)
+async function checkWeatherStatus(location){
+    const LocationData = await getWeatherData(`${location}`);
+    const locationProcessedData = processJSONData(LocationData);
+    console.log(locationProcessedData)
 }
 
-checkWeatherStatus();
+// checkWeatherStatus();
+function searchLocation(){
+    const input = document.querySelector('input');
+    const searchIcon = document.querySelector('img');
+    searchIcon.addEventListener('click', async () => {
+        await checkWeatherStatus(input.value);
+        console.log("am clicked")
+    });
+}
+
+searchLocation();
