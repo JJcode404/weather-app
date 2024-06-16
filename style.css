@@ -45,6 +45,7 @@ input:focus{
 .main{
     align-items: center;
     text-align: center;
+    width: 20em;
 }
 .forecast{
     margin-top: 2em;
@@ -52,4 +53,26 @@ input:focus{
     font-size: 2rem;
     color: white;
 
+}
+.fa-water, 
+.fa-wind{
+    font-size: 1.5em;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 1.5em 0px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.small{
+    font-size: 13px;
+}
+#condition{
+    color: white;
+    font-size: 1.3em;
 }

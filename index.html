@@ -4,26 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="api.js" defer></script>
+    <script src="https://kit.fontawesome.com/d005163ee0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
 <body>
     <div class="main">
         <div class="search">
-            <input type="text" placeholder="search">
+            <input type="text" placeholder="search" value="kenya">
             <div class="search-div">
                 <img src="searchIcon.svg" width="10px">
             </div>
         </div>
         <div class="img-container">
-            <img src="cloudy.png" alt="" width="150px">
+            <img src="cloudy.png" alt="" width="150px" class="replace">
+            <div id="condition"></div>
         </div>
         <div class="forecast">
-            <div class="temp">
-                22C
+            <div class="temp" id="temp">
+                22°C 
             </div>
-            <div class="location">
+            <div class="location" id="location">
                 Kenya Nairobi
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="humidity flex">
+                <i class="fa-solid fa-water"></i>
+                <div class="last">
+                    <div class="percentange" id="humidity" >
+                        70%
+                    </div>
+                    <div class="small">humidity</div>
+                </div>
+            </div>
+            <div class="wind flex">
+                <i class="fa-solid fa-wind"></i>
+                <div class="last">
+                    <div class="speed" id="speed">
+                        18 km/h
+                    </div>
+                    <div class="small">Wind Speed</div>
+                </div>
             </div>
         </div>
     </div>
