@@ -23,7 +23,7 @@ async function checkWeatherStatus(location){
     console.log(locationProcessedData)
 }
 
-// checkWeatherStatus();
+checkWeatherStatus("kenya");
 function searchLocation(){
     const input = document.querySelector('input');
     const searchIcon = document.querySelector('img');
